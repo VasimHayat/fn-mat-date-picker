@@ -1,0 +1,11 @@
+<div style="padding-top: 40px;">
+  <div style="visibility: hidden;">
+    <input matInput [matDatepicker]="picker" (dateChange)="setDate()" [matDatepickerFilter]="datePickerFilter"
+      placeholder="Choose a date" [(ngModel)]="selectedDate">
+    <mat-datepicker #picker [startView]="startView" [panelClass]="customClass"
+      (monthSelected)="_monthSelectedHandler($event,picker)"></mat-datepicker>
+  </div>
+  <button mat-raised-button [disabled]="prevDisable()" (click)="nextPrevHandler(false)">Prev</button>
+  <button mat-raised-button (click)="picker.open()">{{getFormattedDate()}}</button>
+  <button mat-raised-button [disabled]="nextDisable()" (click)="nextPrevHandler(true)">Next</button>
+</div>

@@ -1,0 +1,11 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+::ng-deep .fn-date-month-picker {
+  .mat-calendar-period-button {
+    pointer-events: none;
+  }
+
+  .mat-calendar-arrow {
+    display: none;
+  }
+}

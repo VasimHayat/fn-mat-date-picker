@@ -1,0 +1,9 @@
+<div style="padding-top:100px;text-align: center;">
+  <label>
+    Date :
+  </label>
+  <fn-date-picker [selectedDate]="dateObject.startDate" (callback)="changeDate($event)"
+    (dateDisabled)="disabledDate($event)" (nextDisabledCallback)="nextDisable($event)"
+    (nextPrevCallback)="nextPrevDate($event)" (prevDisabledCallback)="prevDisable($event)">
+  </fn-date-picker>
+</div>
